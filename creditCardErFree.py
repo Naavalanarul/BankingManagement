@@ -9,7 +9,7 @@ import bcrypt
 # Database connection
 def createDBConnection():
     try:
-        return sql.connect(host="localhost", user="root", password="naaval@123")
+        return sql.connect(host="localhost", user="root", password="")
     except sql.Error as err:
         print(f"Error: {err}")
         return None
@@ -196,12 +196,12 @@ def adminUser(cursor,con):
     password1 = "NaavalanArul"
     hashedPass1 = hashPin(password1)
 
-    username2 = "LalithMohan"
-    password2 = "LalithMohan"
+    username2 = ""
+    password2 = ""
     hashedPass2 = hashPin(password2)
 
-    username3 = "PranavPK"
-    password3 = "PranavPK"
+    username3 = ""
+    password3 = ""
     hashedPass3 = hashPin(password3)
 
     insertAdminQuery1 = "INSERT IGNORE INTO adminUsers VALUES (%s, %s)"
